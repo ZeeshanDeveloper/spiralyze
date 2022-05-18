@@ -56,3 +56,35 @@ $(".nav-opener").click(function () {
         height: 'toggle'
     });
 });
+function validate() {
+    let num = 0;
+    $( ".inp-box .inp").each(function() {
+        if( !$(this).val() ) {
+            $(this).parent().addClass('empty');
+      }
+      else{
+          $(this).parent().removeClass('empty');
+          num = num + 1;
+      }
+    });
+
+    if($('.drop-row select').val()==''){
+        $('.drop-row').addClass('empty');
+    }
+    else{
+        $('.drop-row').removeClass('empty');
+        num = num + 1;
+    }
+    if(num === 5){
+        document.location = 'thanks.html'; 
+    }
+}
+$(document).click(function(){
+    $( ".inp-box .inp").each(function() {
+          $(this).parent().removeClass('empty');
+    });
+    $('.drop-row').removeClass('empty');
+  });
+  $(".btn-row").click(function(e){
+    e.stopPropagation();
+  });

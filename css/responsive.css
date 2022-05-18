@@ -5,13 +5,28 @@
 .organize .txt .disc br{
     display: none;
 }
+.about .about-text p br{
+    display: none;
+}
+@media (min-width: 1024px) and (max-width: 1390px) {
+    .container-cus {
+        width: 90%;
+    }
+    .about .about-text a span{
+        margin-top: 14px;
+    }
+    .testi-carousel .carousel-testi .item{
+        grid-template-columns: 230px 1fr;
+    }
+}
 @media (min-width: 770px) and (max-width: 1024px) {
     .jumbo-box::before, .jumbo-box::after{
         background-position: right bottom;
         background-size: contain;
     }
-    .jumbo-box .form-box{
-        grid-template-columns: auto auto;
+    .jumbo-box .form-box {
+        grid-template-columns: 438px 408px;
+        justify-content: space-between;
     }
     .jumbo-box .form-box .txt h1{
         font-size: 42px;
@@ -135,7 +150,7 @@
         display: inline-block;
     }
     .jumbo-box .c-navbar ul li a{
-        line-height: 35px;
+        line-height: 41px;
     }
     .jumbo-box .c-navbar ul li:last-child{
         padding: 0px;
@@ -146,7 +161,8 @@
     }
     .jumbo-box .form-box{
         grid-template-columns: auto;
-        row-gap: 60px;
+        row-gap: 56px;
+        padding-top: 56px;
         padding-bottom: 185px;
     }
     .jumbo-box .form-box .txt{
@@ -168,10 +184,17 @@
         padding-top: 10px;
     }
     .about .about-imgs{
-        column-gap: 24px;margin-bottom: 56px;
+        column-gap: 22px;
+        margin-bottom: 64px;
+    }
+    .about .about-text h3{
+        font-size: 36px;
     }
     .about .about-text p{
         column-count: 2;
+    }
+    .about .about-text a span{
+        margin-top: 23px;
     }
     .testi-carousel .container-cus{
         grid-template-columns: 100%;
@@ -180,6 +203,7 @@
         display: none;
     }
     .testi-carousel .carousel-testi .item{
+        grid-template-columns: 198px 1fr;
         padding: 10px 0%;
         column-gap: 25px;
     }
@@ -208,23 +232,30 @@
         grid-template-columns: 1fr;
         row-gap: 32px;
     }
+    .organize .txt .disc{
+        column-gap: 24px;
+    }
     .organize .btns{
         grid-template-columns: repeat(2, 1fr);
         column-gap: 24px;
         row-gap: 24px;
+    }
+    .organize .btns .c-btn .tooltp{
+        width: 92%;
     }
     .video-sec{
         grid-template-columns: 1fr;
     }
     .video-sec .txt h5{
         text-align: center;
+        margin-bottom: 64px;
     }
     .video-sec .txt{
         padding-left: 6%;
         padding-right: 6%;
     }
     .video-sec .txt .video-bac{
-        top: -27%;
+        top: -26%;
         left: -13%;
         width: 124%;
         height: 127%;
@@ -232,15 +263,15 @@
         transform: rotate(90deg);
     }
     .video-sec .txt .video-bac2{
-        opacity: 0.2;
-        left: -11%;
-        top: -24%;
+        left: -13%;
+        top: -23%;
         z-index: -2;
     }
     .video-sec .video-img .play{
         width: 155px;
         height: 155px;
         bottom: auto;
+        top: -12px;
     }
     .video-sec .video-img .play svg {
         width: 94px;
@@ -258,7 +289,7 @@
         margin: auto;
     }
     .footer{
-        padding: 30px 0px;
+        padding: 32px 0px;
     }
     .footer .container-cus{
         grid-template-columns: auto;
@@ -271,7 +302,13 @@
 }
 @media (min-width: 0px) and (max-width: 569px) {
     .jumbo-box{
+        background-size: 219% auto;
+        background-repeat: no-repeat;
+        background-position: top right;
         padding-top: 12px;
+    }
+    .jumbo-box .container-cus::before{
+        background: linear-gradient(180deg, rgb(25 77 65 / 53%) 0%, #1b4835 34%);
     }
     .jumbo-box .c-navbar{
         grid-template-columns: 1fr auto;
@@ -316,18 +353,19 @@
     }
     .jumbo-box .form-box{
         padding-top: 44px;
-        padding-bottom: 160px;
+        padding-bottom: 175px;
         row-gap: 36px;
-    }
-    .jumbo-box .form-box .form h2{
-        font-size: 24px;
-        line-height: 29px;
     }
     .jumbo-box .form-box .form{
         width: 100%;
         padding: 36px 16px;
         padding-bottom: 56px;
-    }   
+    }
+    .jumbo-box .form-box .form h2{
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 37px;
+    }
     .jumbo-box .form-box .form .inp-row{
         grid-template-columns: 1fr;
         row-gap: 16px;
@@ -354,14 +392,14 @@
         display: none;
     }
     .about .about-text h3{
-        font-size: 30px;
-        line-height: 46px;
+        font-size: 26px;
+        line-height: 32px;
         margin-bottom: 18px;
     }
     .about .about-text p {
         column-count: 1;
     }
-    .about .about-text p{
+    .about .about-text p br{
         display: block;
     }
     .testi-carousel .carousel-testi .item{
@@ -382,9 +420,11 @@
         width: 51%;
         margin-left: 32px;
         margin-top: -60px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
     }
     .testi-carousel .carousel-testi .item .txt {
-        padding: 40px 32px;
+        padding: 48px 32px;
         padding-top: 30px;
         border-top-right-radius: 0px;
         border-top-left-radius: 0px;
@@ -400,12 +440,18 @@
         height: 47px;
         right: 35px;
     }
+    .testi-carousel .carousel-testi .owl-dots {
+        margin-top: 64px;
+    }
     .organize {
-        padding: 84px 0px;
+        padding: 85px 0px;
     }
     .organize h5{
-        font-size: 28px;
-        line-height: 33px;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .organize .txt {
+        row-gap: 26px;
     }
     .organize .txt .disc{
         column-count: 1;
@@ -417,18 +463,22 @@
         grid-template-columns: repeat(1, 1fr);
         row-gap: 16px;
     }
+    .organize .btns .c-btn {
+        font-size: 18px;
+        line-height: 28px;
+    }
     .organize .btns .c-btn .tooltp{
         width: 100%;
     }
     .video-sec .txt {
-        padding: 62px 6%;
+        padding: 62px 6% 50px 6%;
     }
     .video-sec .txt .video-bac,
     .video-sec .txt .video-bac2 {
         top: auto;
         bottom: -152px;
         left: -13%;
-        width: 154%;
+        width: 220%;
         height: 175%;
     }
     .video-sec .txt .video-bac2{
@@ -441,8 +491,11 @@
         padding: 0px 44px;
         margin-bottom: 36px;
     }
+    .video-sec .txt .check-box{
+        margin-bottom: 16px;
+    }
     .video-sec .txt .check-box p{
-        font-size: 16px;
+        font-size: 18px;
         line-height: 24px;
     }
     .video-sec .txt .check-box p span{
@@ -458,7 +511,13 @@
         width: 150%;
     }
     .video-sec .video-img::after{
-        background: rgb(25 77 68 / 50%);
+        background: rgb(25 77 68 / 0%);
+    }
+    .footer{
+        padding: 34px 0px;
+    }
+    .footer .container-cus::after{
+        content: none;
     }
     .footer .copy {
         font-size: 12px;
@@ -468,13 +527,14 @@
         font-size: 12px;
         line-height: 22px;
     }
-}
-@media (min-width: 0px) and (max-width: 569px) {
-    .video-sec .txt .check-box p {
-        font-size: 14px;
+    .footer ul li::after{
+        height: 12px;
+        width: 1px;
     }
+}
+@media (min-width: 0px) and (max-width: 360px) {
     .video-sec .txt .video-bac, .video-sec .txt .video-bac2{
-        width: 256%;
+        width: 255%;
         height: 175%;
     }
 }
